@@ -3,7 +3,7 @@ site_url: https://docs.maysano.com
 site_description: Maysano Data Product Platform Documentation
 site_author: Maysano Team
 site_dir: _site   # ← add it here (top level)
-repo_url: https://github.com/kyyberi/mkdocs
+repo_url: https://github.com/Maysano/docs
 edit_uri: blob/master/docs/
 
 theme:
@@ -21,15 +21,15 @@ theme:
     - django
 
 nav:
-  - Home: index.md
-  - Maysano: maysano.md
-  - Getting Started: getting-started.md
-  - User Guide: user-guide/
-  - Developer Guide: dev-guide/
-  - About:
-    - Release Notes: about/release-notes.md
-    - Contributing: about/contributing.md
-    - License: about/license.md
+  - Home: maysano.md
+#  - Maysano: maysano.md
+#  - Getting Started: getting-started.md
+#  - User Guide: user-guide/
+#  - Developer Guide: dev-guide/
+#  - About:
+#    - Release Notes: about/release-notes.md
+#    - Contributing: about/contributing.md
+#    - License: about/license.md
 
 extra_css:
   - stylesheets/extra.css

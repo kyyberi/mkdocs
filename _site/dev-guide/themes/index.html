@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Maysano Team" /><link rel="canonical" href="https://docs.maysano.com/dev-guide/themes/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Themes - Maysano Docs</title>
+    <title>Developing Themes - Maysano Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -14,7 +14,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Themes";
+        var mkdocs_page_name = "Developing Themes";
         var mkdocs_page_input_path = "dev-guide/themes.md";
         var mkdocs_page_url = "/dev-guide/themes/";
       </script>
@@ -52,169 +52,8 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                <li class="toctree-l1"><a class="reference internal" href="../../maysano/">Home</a>
                 </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../maysano/">Maysano</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../getting-started/">Getting Started</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">User Guide</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/">User Guide</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/installation/">Installation</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/writing-your-docs/">Writing Your Docs</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/choosing-your-theme/">Choosing Your Theme</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/customizing-your-theme/">Customizing Your Theme</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/localizing-your-theme/">Localizing Your Theme</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/configuration/">Configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/cli/">Command Line Interface</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/deploying-your-docs/">Deploying Your Docs</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Developer Guide</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../">Developer Guide</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Themes</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#creating-a-custom-theme">Creating a custom theme</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#basic-theme">Basic theme</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#picking-up-css-and-javascript-from-the-config">Picking up CSS and JavaScript from the config</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#theme-files">Theme Files</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#template-files">Template Files</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#theme-meta-files">Theme Meta Files</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#dot-files">Dot Files</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#documentation-files">Documentation Files</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#template-variables">Template Variables</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#global-context">Global Context</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#config">config</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#nav">nav</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#mkdocs.structure.nav.Navigation">Navigation</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#base_url">base_url</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#mkdocs_version">mkdocs_version</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#build_date_utc">build_date_utc</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#pages">pages</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#page">page</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#mkdocs.structure.pages.Page">Page</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#anchorlink">AnchorLink</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#navigation-objects">Navigation Objects</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#section">Section</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#mkdocs.structure.nav.Section">Section</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#link">Link</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#mkdocs.structure.nav.Link">Link</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#extra-context">Extra Context</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#template-filters">Template Filters</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#url">url</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#tojson">tojson</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#script_tag">script_tag</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#search-and-themes">Search and themes</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#include_search_page">include_search_page</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#search_index_only">search_index_only</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#packaging-themes">Packaging Themes</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#package-layout">Package Layout</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#theme-configuration">Theme Configuration</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#locale">locale</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#static_templates">static_templates</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#extends">extends</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#distributing-themes">Distributing Themes</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#supporting-theme-localizationtranslation">Supporting theme Localization/Translation</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#using-the-localizationtranslation-commands">Using the Localization/Translation commands</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#example-custom-theme-localizationtranslation-workflow">Example custom theme Localization/Translation workflow</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#packaging-translations-with-your-theme">Packaging Translations with your theme</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../translations/">Translations</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../plugins/">Plugins</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../api/">API Reference</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">About</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../about/release-notes/">Release Notes</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../about/contributing/">Contributing</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../about/license/">License</a>
-                  </li>
               </ul>
       </div>
     </div>
@@ -230,10 +69,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Developer Guide</li>
-      <li class="breadcrumb-item active">Themes</li>
+      <li class="breadcrumb-item active">Developing Themes</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/kyyberi/mkdocs/blob/master/docs/dev-guide/themes.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/Maysano/docs/blob/master/docs/dev-guide/themes.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -1931,10 +1769,6 @@ different process for generating those <code>mo</code> files if you chose to do 
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../" class="btn btn-neutral float-left" title="Developer Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../translations/" class="btn btn-neutral float-right" title="Translations">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -1957,14 +1791,10 @@ different process for generating those <code>mo</code> files if you chose to do 
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
-          <a href="https://github.com/kyyberi/mkdocs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/Maysano/docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
         </span>
     
     
-      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../translations/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

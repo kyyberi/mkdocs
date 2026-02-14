@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Maysano Team" /><link rel="canonical" href="https://docs.maysano.com/dev-guide/api/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>API Reference - Maysano Docs</title>
+    <title>API reference - Maysano Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -14,7 +14,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "API Reference";
+        var mkdocs_page_name = "API reference";
         var mkdocs_page_input_path = "dev-guide/api.md";
         var mkdocs_page_url = "/dev-guide/api/";
       </script>
@@ -52,189 +52,8 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                <li class="toctree-l1"><a class="reference internal" href="../../maysano/">Home</a>
                 </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../maysano/">Maysano</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../getting-started/">Getting Started</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">User Guide</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/">User Guide</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/installation/">Installation</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/writing-your-docs/">Writing Your Docs</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/choosing-your-theme/">Choosing Your Theme</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/customizing-your-theme/">Customizing Your Theme</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/localizing-your-theme/">Localizing Your Theme</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/configuration/">Configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/cli/">Command Line Interface</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/deploying-your-docs/">Deploying Your Docs</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Developer Guide</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../">Developer Guide</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../themes/">Themes</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../translations/">Translations</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../plugins/">Plugins</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">API Reference</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#mkdocs.structure.files.Files">Files</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.src_paths">src_paths</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.src_uris">src_uris</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.__iter__">__iter__()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.__len__">__len__()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.__contains__">__contains__()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.get_file_from_path">get_file_from_path()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.append">append()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.remove">remove()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.copy_static_files">copy_static_files()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.documentation_pages">documentation_pages()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.static_pages">static_pages()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.media_files">media_files()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.javascript_files">javascript_files()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.css_files">css_files()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.Files.add_files_from_theme">add_files_from_theme()</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mkdocs.structure.files.File">File</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.src_uri">src_uri</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.generated_by">generated_by</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.dest_path">dest_path</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.src_path">src_path</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.src_dir">src_dir</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.dest_dir">dest_dir</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.use_directory_urls">use_directory_urls</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.inclusion">inclusion</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.name">name</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.dest_uri">dest_uri</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.url">url</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.abs_src_path">abs_src_path</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.abs_dest_path">abs_dest_path</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.content_bytes">content_bytes</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.content_string">content_string</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.generated">generated()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.edit_uri">edit_uri()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.url_relative_to">url_relative_to()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.copy_file">copy_file()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.is_documentation_page">is_documentation_page()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.is_static_page">is_static_page()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.is_media_file">is_media_file()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.is_javascript">is_javascript()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.structure.files.File.is_css">is_css()</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mkdocs.config.base.Config">Config</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.config.base.Config.__new__">__new__()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.config.base.Config.set_defaults">set_defaults()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.config.base.Config.load_dict">load_dict()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.config.base.Config.load_file">load_file()</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mkdocs.utils.templates.TemplateContext">TemplateContext</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.utils.templates.TemplateContext.nav">nav</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.utils.templates.TemplateContext.pages">pages</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.utils.templates.TemplateContext.base_url">base_url</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.utils.templates.TemplateContext.extra_css">extra_css</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.utils.templates.TemplateContext.extra_javascript">extra_javascript</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.utils.templates.TemplateContext.mkdocs_version">mkdocs_version</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.utils.templates.TemplateContext.build_date_utc">build_date_utc</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.utils.templates.TemplateContext.config">config</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.utils.templates.TemplateContext.page">page</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mkdocs.livereload.LiveReloadServer">LiveReloadServer</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.livereload.LiveReloadServer.watch">watch()</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mkdocs.livereload.LiveReloadServer.unwatch">unwatch()</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">About</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../about/release-notes/">Release Notes</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../about/contributing/">Contributing</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../about/license/">License</a>
-                  </li>
               </ul>
       </div>
     </div>
@@ -250,10 +69,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Developer Guide</li>
-      <li class="breadcrumb-item active">API Reference</li>
+      <li class="breadcrumb-item active">API reference</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/kyyberi/mkdocs/blob/master/docs/dev-guide/api.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/Maysano/docs/blob/master/docs/dev-guide/api.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -1635,10 +1453,6 @@ default if it has one.</p>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../plugins/" class="btn btn-neutral float-left" title="Plugins"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../about/release-notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -1661,14 +1475,10 @@ default if it has one.</p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
-          <a href="https://github.com/kyyberi/mkdocs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/Maysano/docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
         </span>
     
     
-      <span><a href="../plugins/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../../about/release-notes/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

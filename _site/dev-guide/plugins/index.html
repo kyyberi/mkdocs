@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Maysano Team" /><link rel="canonical" href="https://docs.maysano.com/dev-guide/plugins/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Plugins - Maysano Docs</title>
+    <title>MkDocs Plugins - Maysano Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -14,7 +14,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Plugins";
+        var mkdocs_page_name = "MkDocs Plugins";
         var mkdocs_page_input_path = "dev-guide/plugins.md";
         var mkdocs_page_url = "/dev-guide/plugins/";
       </script>
@@ -52,123 +52,8 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                <li class="toctree-l1"><a class="reference internal" href="../../maysano/">Home</a>
                 </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../maysano/">Maysano</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../getting-started/">Getting Started</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">User Guide</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/">User Guide</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/installation/">Installation</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/writing-your-docs/">Writing Your Docs</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/choosing-your-theme/">Choosing Your Theme</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/customizing-your-theme/">Customizing Your Theme</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/localizing-your-theme/">Localizing Your Theme</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/configuration/">Configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/cli/">Command Line Interface</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/deploying-your-docs/">Deploying Your Docs</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Developer Guide</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../">Developer Guide</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../themes/">Themes</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../translations/">Translations</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Plugins</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#installing-plugins">Installing Plugins</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#using-plugins">Using Plugins</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#developing-plugins">Developing Plugins</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#baseplugin">BasePlugin</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#config_scheme">config_scheme</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#config">config</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#load_configoptions">load_config(options)</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#on_event_name">on_&lt;event_name&gt;()</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#events">Events</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#one-time-events">One-time Events</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#global-events">Global Events</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#template-events">Template Events</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#page-events">Page Events</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#event-priorities">Event Priorities</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#mkdocs.plugins.event_priority">event_priority()</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#mkdocs.plugins.CombinedEvent">CombinedEvent</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#handling-errors">Handling Errors</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#mkdocs.exceptions.MkDocsException">MkDocsException</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#mkdocs.exceptions.ConfigurationError">ConfigurationError</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#mkdocs.exceptions.BuildError">BuildError</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#mkdocs.exceptions.PluginError">PluginError</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#logging-in-plugins">Logging in plugins</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#mkdocs.plugins.get_plugin_logger">get_plugin_logger()</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#entry-point">Entry Point</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#publishing-a-plugin">Publishing a Plugin</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../api/">API Reference</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">About</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../about/release-notes/">Release Notes</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../about/contributing/">Contributing</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../about/license/">License</a>
-                  </li>
               </ul>
       </div>
     </div>
@@ -184,10 +69,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Developer Guide</li>
-      <li class="breadcrumb-item active">Plugins</li>
+      <li class="breadcrumb-item active">MkDocs Plugins</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/kyyberi/mkdocs/blob/master/docs/dev-guide/plugins.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/Maysano/docs/blob/master/docs/dev-guide/plugins.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -2889,10 +2773,6 @@ tell MkDocs to use it via the config.</p>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../translations/" class="btn btn-neutral float-left" title="Translations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../api/" class="btn btn-neutral float-right" title="API Reference">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -2915,14 +2795,10 @@ tell MkDocs to use it via the config.</p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
-          <a href="https://github.com/kyyberi/mkdocs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/Maysano/docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
         </span>
     
     
-      <span><a href="../translations/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../api/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
