@@ -1,11 +1,12 @@
 /* =========================================================
-   MAYSANO — Full Width ReadTheDocs Override
+   MAYSANO — Clean Full Width RTD Override (Stable Version)
    ========================================================= */
 
 :root {
   --m-bg: #0E1B24;
   --m-surface: #132734;
   --m-surface-2: #1C3442;
+  --m-content-bg: #102530;
   --m-text: #E6EEF4;
   --m-muted: #B7C2CC;
   --m-accent: #C9A227;
@@ -13,44 +14,73 @@
 }
 
 /* =========================================================
-   REMOVE WIDTH CONSTRAINT (THIS IS THE IMPORTANT PART)
+   FULL WIDTH CONTENT
    ========================================================= */
 
-/* Remove centered container limitation */
 .wy-nav-content {
-  max-width: 1400px !important;
-  margin: 0 auto !important;
+  max-width: none !important;
+  width: 100% !important;
   margin: 0 !important;
-  padding: 40px 60px !important; /* comfortable spacing */
-  background: #102530 !important;
+  padding: 40px 60px !important;
+  background: var(--m-content-bg) !important;
 }
 
-/* Make wrapper stretch */
 .wy-nav-content-wrap {
-  margin-left: 300px !important; /* keep sidebar offset */
+  margin-left: 300px !important;
   background: var(--m-bg) !important;
 }
 
-/* Remove inner content cap */
 .rst-content {
   max-width: none !important;
 }
 
 /* =========================================================
-   SIDEBAR
+   SIDEBAR STRUCTURE (STABLE VERSION)
    ========================================================= */
 
-.wy-nav-side,
-.wy-side-scroll {
+.wy-nav-side {
   background: var(--m-surface) !important;
   border-right: 1px solid var(--m-border) !important;
 }
 
+/* Keep default RTD scrolling behavior — do NOT override with flex */
+.wy-side-scroll {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Sticky header */
 .wy-side-nav-search {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: var(--m-surface-2) !important;
   border-bottom: 1px solid var(--m-border) !important;
-  padding: 14px !important;
+  padding: 16px 14px 20px 14px !important;
 }
+
+/* Add clean separation below search */
+.wy-side-nav-search::after {
+  content: "";
+  display: block;
+  margin-top: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Space before first menu item */
+.wy-menu-vertical {
+  padding-top: 14px !important;
+  padding-bottom: 24px !important;
+}
+
+/* Prevent scroll-to-active from hiding header */
+.wy-menu-vertical a {
+  scroll-margin-top: 130px;
+}
+
+/* =========================================================
+   SIDEBAR STYLING
+   ========================================================= */
 
 .wy-side-nav-search input[type="text"] {
   background: rgba(255,255,255,0.06) !important;
@@ -65,6 +95,7 @@
 
 .wy-menu-vertical a {
   color: var(--m-muted) !important;
+  transition: all 0.15s ease;
 }
 
 .wy-menu-vertical a:hover {
@@ -72,11 +103,23 @@
   color: #FFF !important;
 }
 
+/* Active item */
 .wy-menu-vertical li.current,
 .wy-menu-vertical li.current > a {
   background: var(--m-surface-2) !important;
   color: #FFF !important;
   border-left: 4px solid var(--m-accent) !important;
+  padding-left: 11px !important;
+  font-weight: 600 !important;
+}
+
+/* Section captions */
+.wy-menu-vertical p.caption {
+  color: var(--m-accent) !important;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  font-size: 11px !important;
+  opacity: 0.85 !important;
 }
 
 /* =========================================================
@@ -104,8 +147,24 @@
   color: var(--m-accent) !important;
 }
 
+.rst-content a:hover {
+  opacity: 0.85;
+}
+
 /* =========================================================
-   BUTTONS
+   CODE BLOCKS
+   ========================================================= */
+
+.rst-content pre code,
+.rst-content code {
+  background: rgba(255,255,255,0.06) !important;
+  color: var(--m-text) !important;
+  border: 1px solid var(--m-border) !important;
+  border-radius: 6px !important;
+}
+
+/* =========================================================
+   BUTTONS (Prev / Next)
    ========================================================= */
 
 .rst-content .btn,
@@ -117,7 +176,14 @@
   box-shadow: none !important;
 }
 
-/* Hide default footer */
+.rst-content .btn:hover {
+  border-color: rgba(201,162,39,0.45) !important;
+}
+
+/* =========================================================
+   FOOTER REMOVAL
+   ========================================================= */
+
 footer {
   display: none !important;
 }
