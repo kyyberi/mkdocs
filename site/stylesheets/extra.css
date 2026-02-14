@@ -1,0 +1,123 @@
+/* =========================================================
+   MAYSANO — Full Width ReadTheDocs Override
+   ========================================================= */
+
+:root {
+  --m-bg: #0E1B24;
+  --m-surface: #132734;
+  --m-surface-2: #1C3442;
+  --m-text: #E6EEF4;
+  --m-muted: #B7C2CC;
+  --m-accent: #C9A227;
+  --m-border: rgba(255,255,255,0.08);
+}
+
+/* =========================================================
+   REMOVE WIDTH CONSTRAINT (THIS IS THE IMPORTANT PART)
+   ========================================================= */
+
+/* Remove centered container limitation */
+.wy-nav-content {
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  margin: 0 !important;
+  padding: 40px 60px !important; /* comfortable spacing */
+  background: #102530 !important;
+}
+
+/* Make wrapper stretch */
+.wy-nav-content-wrap {
+  margin-left: 300px !important; /* keep sidebar offset */
+  background: var(--m-bg) !important;
+}
+
+/* Remove inner content cap */
+.rst-content {
+  max-width: none !important;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.wy-nav-side,
+.wy-side-scroll {
+  background: var(--m-surface) !important;
+  border-right: 1px solid var(--m-border) !important;
+}
+
+.wy-side-nav-search {
+  background: var(--m-surface-2) !important;
+  border-bottom: 1px solid var(--m-border) !important;
+  padding: 14px !important;
+}
+
+.wy-side-nav-search input[type="text"] {
+  background: rgba(255,255,255,0.06) !important;
+  color: var(--m-text) !important;
+  border: 1px solid var(--m-border) !important;
+  border-radius: 999px !important;
+}
+
+.wy-menu-vertical li {
+  margin: 4px 0;
+}
+
+.wy-menu-vertical a {
+  color: var(--m-muted) !important;
+}
+
+.wy-menu-vertical a:hover {
+  background: rgba(201,162,39,0.12) !important;
+  color: #FFF !important;
+}
+
+.wy-menu-vertical li.current,
+.wy-menu-vertical li.current > a {
+  background: var(--m-surface-2) !important;
+  color: #FFF !important;
+  border-left: 4px solid var(--m-accent) !important;
+}
+
+/* =========================================================
+   CONTENT TYPOGRAPHY
+   ========================================================= */
+
+.rst-content {
+  color: var(--m-text) !important;
+}
+
+.rst-content h1,
+.rst-content h2,
+.rst-content h3 {
+  color: #FFF !important;
+  font-weight: 650 !important;
+}
+
+.rst-content p,
+.rst-content li {
+  color: rgba(230,238,244,0.9) !important;
+  line-height: 1.7 !important;
+}
+
+.rst-content a {
+  color: var(--m-accent) !important;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.rst-content .btn,
+.rst-content .btn-neutral {
+  background: var(--m-surface-2) !important;
+  color: var(--m-text) !important;
+  border: 1px solid var(--m-border) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+/* Hide default footer */
+footer {
+  display: none !important;
+}

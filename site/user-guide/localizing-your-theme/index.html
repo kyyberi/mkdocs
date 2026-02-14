@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Maysano Team" /><link rel="canonical" href="https://docs.maysano.com/user-guide/localizing-your-theme/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Localizing Your Theme - Maysano Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Localizing Your Theme";
+        var mkdocs_page_input_path = "user-guide/localizing-your-theme.md";
+        var mkdocs_page_url = "/user-guide/localizing-your-theme/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/django.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-274394082"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-274394082");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Maysano Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../maysano/">Maysano</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../getting-started/">Getting Started</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">User Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../writing-your-docs/">Writing Your Docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../choosing-your-theme/">Choosing Your Theme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../customizing-your-theme/">Customizing Your Theme</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Localizing Your Theme</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#supported-locales">Supported locales</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#contributing-theme-translations">Contributing theme translations</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cli/">Command Line Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploying-your-docs/">Deploying Your Docs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../dev-guide/">Developer Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../dev-guide/themes/">Themes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../dev-guide/translations/">Translations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../dev-guide/plugins/">Plugins</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../dev-guide/api/">API Reference</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/release-notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/contributing/">Contributing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/license/">License</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Maysano Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User Guide</li>
+      <li class="breadcrumb-item active">Localizing Your Theme</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/kyyberi/mkdocs/blob/master/docs/user-guide/localizing-your-theme.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="localizing-your-theme">Localizing Your Theme<a class="headerlink" href="#localizing-your-theme" title="Permanent link"></a></h1>
+<p>Display your theme in your preferred language.</p>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>
+Theme localization only translates the text elements of the theme itself
+(such as "next" and "previous" links), not the actual content of your
+documentation. If you wish to create multilingual documentation, you need
+to combine theme localization as described here with a third-party
+internationalization/localization plugin.</p>
+</div>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link"></a></h2>
+<p>For theme localization to work, you must use a theme which supports it and
+enable <code>i18n</code> (internationalization) support by installing <code>mkdocs[i18n]</code>:</p>
+<pre class="highlight"><code class="language-bash">pip install 'mkdocs[i18n]'</code></pre>
+<h2 id="supported-locales">Supported locales<a class="headerlink" href="#supported-locales" title="Permanent link"></a></h2>
+<p>In most cases a locale is designated by the <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO-639-1</a> (2-letter) abbreviation
+for your language. However, a locale may also include a territory (or region or
+county) code as well. The language and territory must be separated by an
+underscore. For example, some possible locales for English might include <code>en</code>,
+<code>en_AU</code>, <code>en_GB</code>, and <code>en_US</code>.</p>
+<p>For a list of locales supported by the theme you are using, see that theme's
+documentation.</p>
+<ul>
+<li><a href="../choosing-your-theme/#mkdocs-locale">mkdocs</a></li>
+<li><a href="../choosing-your-theme/#readthedocs-locale">readthedocs</a></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>
+If you configure a language locale which is not yet supported by the theme
+that you are using, MkDocs will fall back to the theme's default locale.</p>
+</div>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link"></a></h2>
+<p>To specify the locale that MkDocs should use, set the <a href="../configuration/#locale">locale</a>
+parameter of the <a href="../configuration/#theme">theme</a> configuration option to the appropriate code.</p>
+<p>For example, to build the <code>mkdocs</code> theme in French you would use the following
+in your <code>mkdocs.yml</code> configuration file:</p>
+<pre class="highlight"><code class="language-yaml">theme:
+  name: mkdocs
+  locale: fr</code></pre>
+<h2 id="contributing-theme-translations">Contributing theme translations<a class="headerlink" href="#contributing-theme-translations" title="Permanent link"></a></h2>
+<p>If a theme has not yet been translated into your language, feel free to
+contribute a translation using the <a href="../../dev-guide/translations/">Translation Guide</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../customizing-your-theme/" class="btn btn-neutral float-left" title="Customizing Your Theme"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../configuration/" class="btn btn-neutral float-right" title="Configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2014 <a href="https://twitter.com/starletdreaming">Tom Christie</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/kyyberi/mkdocs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../customizing-your-theme/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../configuration/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
