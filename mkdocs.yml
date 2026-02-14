@@ -93,6 +93,7 @@ hooks:
 
 plugins:
   - search
+  - mermaid2
   - redirects:
       redirect_maps:
         user-guide/plugins.md: dev-guide/plugins.md
