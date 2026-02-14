@@ -3,7 +3,7 @@ site_url: https://docs.maysano.com
 site_description: Maysano Data Product Platform Documentation
 site_author: Maysano Team
 site_dir: _site   # ← add it here (top level)
-repo_url: https://github.com/kyyberi/mkdocs
+repo_url: https://github.com/maysano/docs
 edit_uri: blob/master/docs/
 
 theme:
