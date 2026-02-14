@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Maysano Team" /><link rel="canonical" href="https://docs.maysano.com/user-guide/deploying-your-docs/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Deploying Your Docs - Maysano Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Deploying Your Docs";
+        var mkdocs_page_input_path = "user-guide/deploying-your-docs.md";
+        var mkdocs_page_url = "/user-guide/deploying-your-docs/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/django.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-274394082"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-274394082");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Maysano Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../maysano/">Maysano</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../getting-started/">Getting Started</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">User Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../writing-your-docs/">Writing Your Docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../choosing-your-theme/">Choosing Your Theme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../customizing-your-theme/">Customizing Your Theme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../localizing-your-theme/">Localizing Your Theme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cli/">Command Line Interface</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Deploying Your Docs</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#github-pages">GitHub Pages</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#project-pages">Project Pages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#organization-and-user-pages">Organization and User Pages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#custom-domains">Custom Domains</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#read-the-docs">Read the Docs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#other-providers">Other Providers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#local-files">Local Files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#404-pages">404 Pages</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../dev-guide/">Developer Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../dev-guide/themes/">Themes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../dev-guide/translations/">Translations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../dev-guide/plugins/">Plugins</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../dev-guide/api/">API Reference</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/release-notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/contributing/">Contributing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/license/">License</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Maysano Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User Guide</li>
+      <li class="breadcrumb-item active">Deploying Your Docs</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/kyyberi/mkdocs/blob/master/docs/user-guide/deploying-your-docs.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="deploying-your-docs">Deploying your docs<a class="headerlink" href="#deploying-your-docs" title="Permanent link"></a></h1>
+<p>A basic guide to deploying your docs to various hosting providers</p>
+<hr />
+<h2 id="github-pages">GitHub Pages<a class="headerlink" href="#github-pages" title="Permanent link"></a></h2>
+<p>If you host the source code for a project on <a href="https://github.com/">GitHub</a>, you can easily use
+<a href="https://pages.github.com/">GitHub Pages</a> to host the documentation for your project. There are two basic
+<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites">types of GitHub Pages sites</a>: Project Pages sites, and User and Organization
+Pages sites. They are nearly identical but have some important differences,
+which require a different work flow when deploying.</p>
+<h3 id="project-pages">Project Pages<a class="headerlink" href="#project-pages" title="Permanent link"></a></h3>
+<p>Project Pages sites are simpler as the site files get deployed to a branch
+within the project repository (<code>gh-pages</code> by default). After you <code>checkout</code> the
+primary working branch (usually <code>master</code>) of the git repository where you
+maintain the source documentation for your project, run the following command:</p>
+<pre class="highlight"><code class="language-sh">mkdocs gh-deploy</code></pre>
+<p>That's it! Behind the scenes, MkDocs will build your docs and use the
+<a href="https://github.com/davisp/ghp-import">ghp-import</a> tool to commit them to the <code>gh-pages</code> branch and push the
+<code>gh-pages</code> branch to GitHub.</p>
+<p>Use <code>mkdocs gh-deploy --help</code> to get a full list of options available for the
+<code>gh-deploy</code> command.</p>
+<p>Be aware that you will not be able to review the built site before it is pushed
+to GitHub. Therefore, you may want to verify any changes you make to the docs
+beforehand by using the <code>build</code> or <code>serve</code> commands and reviewing the built
+files locally.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>
+You should never edit files in your pages repository by hand if you're using
+the <code>gh-deploy</code> command because you will lose your work the next time you
+run the command.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>
+If there are untracked files or uncommitted work in the local repository where
+<code>mkdocs gh-deploy</code> is run, these will be included in the pages that are deployed.</p>
+</div>
+<h3 id="organization-and-user-pages">Organization and User Pages<a class="headerlink" href="#organization-and-user-pages" title="Permanent link"></a></h3>
+<p>User and Organization Pages sites are not tied to a specific project, and the
+site files are deployed to the <code>master</code> branch in a dedicated repository named
+with the GitHub account name. Therefore, you need working copies of two
+repositories on our local system. For example, consider the following file
+structure:</p>
+<pre class="highlight"><code class="language-text">my-project/
+    mkdocs.yml
+    docs/
+orgname.github.io/</code></pre>
+<p>After making and verifying updates to your project you need to change
+directories to the <code>orgname.github.io</code> repository and call the
+<code>mkdocs gh-deploy</code> command from there:</p>
+<pre class="highlight"><code class="language-sh">cd ../orgname.github.io/
+mkdocs gh-deploy --config-file ../my-project/mkdocs.yml --remote-branch master</code></pre>
+<p>Note that you need to explicitly point to the <code>mkdocs.yml</code> configuration file as
+it is no longer in the current working directory. You also need to inform the
+deploy script to commit to the <code>master</code> branch. You may override the default
+with the <a href="../configuration/#remote_branch">remote_branch</a> configuration setting, but if you forget to change
+directories before running the deploy script, it will commit to the <code>master</code>
+branch of your project, which you probably don't want.</p>
+<h3 id="custom-domains">Custom Domains<a class="headerlink" href="#custom-domains" title="Permanent link"></a></h3>
+<p>GitHub Pages includes support for using a <a href="https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site">Custom Domain</a> for your site. In
+addition to the steps documented by GitHub, you need to take one additional step
+so that MkDocs will work with your custom domain. You need to add a <code>CNAME</code> file
+to the root of your <a href="../configuration/#docs_dir">docs_dir</a>. The file must contain a single bare domain or
+subdomain on a single line (see MkDocs' own <a href="https://github.com/mkdocs/mkdocs/blob/master/docs/CNAME">CNAME file</a> as an example). You may
+create the file manually, or use GitHub's web interface to set up the custom
+domain (under Settings / Custom Domain). If you use the web interface, GitHub
+will create the <code>CNAME</code> file for you and save it to the root of your "pages"
+branch. So that the file does not get removed the next time you deploy, you need
+to copy the file to your <code>docs_dir</code>. With the file properly included in your
+<code>docs_dir</code>, MkDocs will include the file in your built site and push it to your
+"pages" branch each time you run the <code>gh-deploy</code> command.</p>
+<p>If you are having problems getting a custom domain to work, see GitHub's
+documentation on <a href="https://help.github.com/articles/troubleshooting-custom-domains/">Troubleshooting custom domains</a>.</p>
+<h2 id="read-the-docs">Read the Docs<a class="headerlink" href="#read-the-docs" title="Permanent link"></a></h2>
+<p><a href="https://readthedocs.org/">Read the Docs</a> offers free documentation hosting. You can import your docs
+using the Git version control system. Read the Docs supports MkDocs out-of-the-box.
+Follow the <a href="https://docs.readthedocs.io/en/stable/intro/getting-started-with-mkdocs.html">instructions</a> on their site to arrange the files in your repository properly,
+create an account and point it at your publicly hosted repository. If properly
+configured, your documentation will update each time you push commits to your
+public repository.</p>
+<h2 id="other-providers">Other Providers<a class="headerlink" href="#other-providers" title="Permanent link"></a></h2>
+<p>Any hosting provider which can serve static files can be used to serve
+documentation generated by MkDocs. While it would be impossible to document how
+to upload the docs to every hosting provider out there, the following guidelines
+should provide some general assistance.</p>
+<p>When you build your site (using the <code>mkdocs build</code> command), all of the files
+are written to the directory assigned to the <a href="../configuration/#site_dir">site_dir</a> configuration option
+(defaults to <code>"site"</code>) in your <code>mkdocs.yaml</code> config file. Generally, you will
+simply need to copy the contents of that directory to the root directory of your
+hosting provider's server. Depending on your hosting provider's setup, you may
+need to use a graphical or command line <a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol">ftp</a>, <a href="https://en.wikipedia.org/wiki/Secure_Shell">ssh</a> or <a href="https://en.wikipedia.org/wiki/Secure_copy">scp</a> client to transfer
+the files.</p>
+<p>For example, a typical set of commands from the command line might look
+something like this:</p>
+<pre class="highlight"><code class="language-sh">mkdocs build
+scp -r ./site user@host:/path/to/server/root</code></pre>
+<p>Of course, you will need to replace <code>user</code> with the username you have with your
+hosting provider and <code>host</code> with the appropriate domain name. Additionally, you
+will need to adjust the <code>/path/to/server/root</code> to match the configuration of
+your hosts' file system.</p>
+<p>See your host's documentation for specifics. You will likely want to search
+their documentation for "ftp" or "uploading site".</p>
+<h2 id="local-files">Local Files<a class="headerlink" href="#local-files" title="Permanent link"></a></h2>
+<p>Rather than hosting your documentation on a server, you may instead distribute
+the files directly, which can then be viewed in a browser using the <code>file://</code>
+scheme.</p>
+<p>Note that, due to the security settings of all modern browsers, some things
+will not work the same and some features may not work at all. In fact, a few
+settings will need to be customized in very specific ways.</p>
+<ul>
+<li>
+<p><a href="../configuration/#site_url">site_url</a>:</p>
+<p>The <code>site_url</code> must be set to an empty string, which instructs MkDocs to
+build your site so that it will work with the <code>file://</code> scheme.</p>
+<pre class="highlight"><code class="language-yaml">site_url: ""</code></pre>
+</li>
+<li>
+<p><a href="../configuration/#use_directory_urls">use_directory_urls</a>:</p>
+<p>Set <code>use_directory_urls</code> to <code>false</code>. Otherwise, internal links between
+pages will not work properly.</p>
+<pre class="highlight"><code class="language-yaml">use_directory_urls: false</code></pre>
+</li>
+<li>
+<p><a href="../configuration/#search">search</a>:</p>
+<p>You will need to either disable the search plugin, or use a third-party
+search plugin which is specifically designed to work with the <code>file://</code>
+scheme. To disable all plugins, set the <code>plugins</code> setting to an empty list.</p>
+<pre class="highlight"><code class="language-yaml">plugins: []</code></pre>
+<p>If you have other plugins enabled, simply ensure that <code>search</code> is not
+included in the list.</p>
+</li>
+</ul>
+<p>When writing your documentation, it is imperative that all internal links use
+relative URLs as <a href="../writing-your-docs/#internal-links">documented</a>. Remember, each reader of your
+documentation will be using a different device and the files will likely be in a
+different location on that device.</p>
+<p>If you expect your documentation to be viewed off-line, you may also need to be
+careful about which themes you choose. Many themes make use of CDNs for various
+support files, which require a live Internet connection. You will need to choose
+a theme which includes all support files directly in the theme.</p>
+<p>When you build your site (using the <code>mkdocs build</code> command), all of the files
+are written to the directory assigned to the <a href="../configuration/#site_dir">site_dir</a> configuration option
+(defaults to <code>"site"</code>) in your <code>mkdocs.yaml</code> config file. Generally, you will
+simply need to copy the contents of that directory and distribute it to your
+readers. Alternatively, you may choose to use a third party tool to convert the
+HTML files to some other documentation format.</p>
+<h2 id="404-pages">404 Pages<a class="headerlink" href="#404-pages" title="Permanent link"></a></h2>
+<p>When MkDocs builds the documentation it will include a 404.html file in the
+<a href="../configuration/#site_dir">build directory</a>. This file will be automatically used when
+deploying to <a href="#github-pages">GitHub</a> but only on a custom domain. Other web
+servers may be configured to use it but the feature won't always be available.
+See the documentation for your server of choice for more information.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../cli/" class="btn btn-neutral float-left" title="Command Line Interface"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../dev-guide/" class="btn btn-neutral float-right" title="Developer Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2014 <a href="https://twitter.com/starletdreaming">Tom Christie</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/kyyberi/mkdocs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../cli/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../dev-guide/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
