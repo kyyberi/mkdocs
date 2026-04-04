@@ -21,15 +21,15 @@ theme:
     - django
 
 nav:
-  - Home: index.md
-  - Maysano: maysano.md
-  - Getting Started: getting-started.md
-  - User Guide: user-guide/
-  - Developer Guide: dev-guide/
-  - About:
-    - Release Notes: about/release-notes.md
-    - Contributing: about/contributing.md
-    - License: about/license.md
+  - Home: maysano.md
+#  - Maysano: maysano.md
+#  - Getting Started: getting-started.md
+#  - User Guide: user-guide/
+#  - Developer Guide: dev-guide/
+#  - About:
+#    - Release Notes: about/release-notes.md
+#    - Contributing: about/contributing.md
+#    - License: about/license.md
 
 extra_css:
   - stylesheets/extra.css
